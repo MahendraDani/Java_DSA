@@ -16,7 +16,6 @@ public class question_05 {
         System.out.println(answer);
     }
     public static boolean isPalindromeNumber(int n, int number){
-        boolean isPalindrome = false;
 
         int[] digits = new int[n];
         boolean isEven = n % 2 ==0;
@@ -29,11 +28,11 @@ public class question_05 {
 
         // Checking for palindrome condition
         for(int j =0; j<n/2;j++){
-            if (digits[j] == digits[n - j -1]){
-                isPalindrome = true;
+            if (digits[j] != digits[n - j -1]){
+                return false;
             }
         }
-        return isPalindrome;
+        return true;
     }
 }
 
